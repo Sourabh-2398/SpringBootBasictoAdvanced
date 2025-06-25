@@ -1,4 +1,4 @@
-package com.springdemo.springbasictoadvanced.controller;
+package com.springdemo.springbasictoadvanced.Controller;
 
 import com.springdemo.springbasictoadvanced.entity.Student;
 import com.springdemo.springbasictoadvanced.repository.StudentRepository;
