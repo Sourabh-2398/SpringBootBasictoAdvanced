@@ -7,21 +7,15 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @Entity
 @Data
+@Table(name = "orders")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-public class Student {
+public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    private Double totalBill;
 
-    @Column(unique = true)
-    private String email;
-
-    private Integer age;
-
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "order_id")
-    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    private Order order;
+    @OneToOne(mappedBy = "order", fetch = FetchType.LAZY)
+    private Student student;
 }
