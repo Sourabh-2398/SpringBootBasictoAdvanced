@@ -9,5 +9,5 @@ public class StudentDTO {
     private String email;
     private Integer age;
     private OrderDTO order;
+    private CourseDTO course;
 }
-
